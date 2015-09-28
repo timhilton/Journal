@@ -1,0 +1,13 @@
+<input type="hidden" id='api-token' value="<%= @user.token %>">
+
+<h3>Welcome Back <%= @user.username %></h3>
+
+<%= button_to 'Log-Out', log_out_path, method: :delete %>
+
+<form class="journal-entry" action="/api/journals" method="post">
+  <input type="text" id="my-journal" name="journal[:entry]">
+  <input type="submit" value="Journal">
+</form>
+
+<section id="journal-list">
+</section>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MicroBlogger App</title>
+    <%= stylesheet_link_tag   'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+
+    <script type="text/template" id="journal-template">
+      <h3>
+        <%%= entry %>
+      </h3>
+      <button type="button" class="remove">Remove</button>
+    </script>
+  </head>
+  <body>
+    <%= yield %>
+
+  <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
+  </body>
+</html>

@@ -10,7 +10,7 @@ class Api::JournalsController < ApplicationController
 
   def create
     journal = @current_user.journals.create(journal_params)
-    render json: journal
+    redirect_to '/users/profile'
   end
 
   def show
@@ -25,6 +25,6 @@ class Api::JournalsController < ApplicationController
   private
 
   def journal_params
-    params.require(:journals).permit(:entry)
+    params.require(:journal).permit(:entry)
   end
 end

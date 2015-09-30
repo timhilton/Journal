@@ -16,7 +16,6 @@ class UsersController < ApplicationController
   def profile
     authenticate!
     @user = current_user
-    render layout: "profile_layout"
   end
 
   private

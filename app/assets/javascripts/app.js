@@ -62,7 +62,7 @@ var journalPainter = new JournalListView({
 });
 journals.fetch();
 
-$('form.create-entry').on('submit', function(e){
+$('.journal-entry').on('submit', function(e){
   e.preventDefault();
   var newEntry = $(this).find("#my-journal").val();
   journals.create({entry: newEntry});

@@ -1,4 +1,26 @@
-<h3>Welcome to the Micro Blog</h3>
+<h3 class="welcome">Welcome to</br> <%= image_tag ("JournalLogo.png"), class: 'splash-logo' %></h3>
 
-<a href="/users/new">Register</a>
-<a href="/users/login">Log-In</a>
+<div class="welcome">
+      <div class="collapsible-header" id="login">Log-In</div>
+      <div class="collapsible-body" id="login">
+        <%= form_tag '/sessions', method: :post, class: 'login-form' do%>
+          <%=label_tag :username %>
+          <%=text_field_tag :username %>
+          <%=label_tag :password %>
+          <%=password_field_tag :password %>
+          <%=submit_tag 'Log-In', class: 'btn'%>
+        <% end%>
+      </div>
+      <p class="smallword">or</p>
+    </br>
+      <div class="register" id="login"><a href="/users/new">Register</a></div>
+</div>
+
+<script type="text/javascript">
+$('.collapsible-header').on('click', function(){
+  $('.collapsible-body').slideDown("slow");
+  $('.collapsible-header').slideUp("slow");
+  $('.smallword').hide('slow');
+  $('.welcome').animate({'margin-bottom': '-5vh'});
+});
+</script>

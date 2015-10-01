@@ -11,9 +11,6 @@
         <h4 class="col s10"><%%= entry %></h4>
         <button type="button" class="remove btn-floating btn-tiny waves-effect waves-light red material-icons">not_interested</button>
         </div>
-        <div class="row">
-          <h6 class="col s12"><%%= created_at%></h6>
-        </div>
     </script>
   </head>
   <body>
@@ -23,6 +20,7 @@
       <a href="#!" class="brand-logo"><%= image_tag ("JournalLogo.png"), class: 'logo' %></a>
       <ul class="right hide-on-med-and-down">
         <li>Welcome Back <%= @user.username %>  </li>
+        <li><a href="/users/<%= @user.id%>/edit">Edit Profile</a></li>
         <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
       </ul>
     </div>

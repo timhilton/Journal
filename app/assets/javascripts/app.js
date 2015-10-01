@@ -45,7 +45,7 @@ var JournalListView = Backbone.View.extend({
     this.$el.empty();
     var journals = this.collection.models;
     var view;
-    for (var i = 0; i < journals.length; i++) {
+    for (var i = journals.length-1; i >= 0; i--) {
       view = new JournalView({model: journals[i]});
       view.render();
       this.$el.append(view.$el);

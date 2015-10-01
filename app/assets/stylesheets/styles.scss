@@ -1,0 +1,73 @@
+$journalgreen: rgb(7, 208, 136);
+$shadow: rgb(87, 87, 87);
+$text: rgb(46, 46, 46);
+$background: asset-data-url('papyrus.jpg');
+
+body::after {
+   content: "";
+   background: $background;
+   opacity: 0.3;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: fixed;
+   z-index: -1;
+ }
+
+h1, h2, h3, h4, h5, h6 {
+  color: $text;
+}
+
+.btn {
+  background-color: $journalgreen;
+}
+
+.btn:hover {
+  background-color: $journalgreen;
+}
+
+#my-journal {
+  margin-left: -2.5vw;
+  margin-right: 2.5vw;
+}
+
+.remove {
+  margin-left: 4vw;
+}
+.logo {
+  height: 10vh;
+  margin-left: 5vw;
+}
+
+.nav-wrapper {
+  background-color: $journalgreen;
+}
+
+.container {
+  margin-top: 5vh;
+  margin-left: 5vw;
+  width: 85vw;
+}
+
+.edit {
+  margin-top: 2vh;
+}
+
+.journal-entry {
+  display: inline;
+}
+
+#journal-list {
+  margin-left: 35vw;
+}
+
+.journal {
+  border: 2px solid $journalgreen;
+  margin: 2.5vh auto;
+  padding: 2.5vh;
+  width: 51vw;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px $shadow;
+  background: $background;
+}

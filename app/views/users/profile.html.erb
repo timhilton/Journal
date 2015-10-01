@@ -1,14 +1,16 @@
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <input type="hidden" id='api-token' value="<%= @user.token %>">
+<div class="container">
+  <form class="journal-entry col s12" action="/api/journals" method="post">
+    <div class="row">
+      <p class="material-icons prefix edit col s1">edit</p>
+      <input type="text" id="my-journal" class="col s10" name="journal[entry]" placeholder="Create a journal entry">
+      <button type="submit" class="btn waves-effect waves-light material-icons col s1">send</button>
+    </div>
+  </form>
 
-<h3>Welcome Back <%= @user.username %></h3>
 
-<%= button_to 'Log-Out', log_out_path, method: :delete %>
+  <section id="journal-list">
+  </section>
 
-<form class="journal-entry" action="/api/journals
-" method="post">
-  <input type="text" id="my-journal" name="journal[entry]">
-  <input type="submit" value="Journal">
-</form>
-
-<section id="journal-list">
-</section>
+</div>

@@ -6,13 +6,28 @@
     <%= csrf_meta_tags %>
 
     <script type="text/template" id="journal-template">
-      <h3>
-        <%%= entry %>
-      </h3>
-      <button type="button" class="remove">Remove</button>
+
+      <div class="row">
+        <h4 class="col s10"><%%= entry %></h4>
+        <button type="button" class="remove btn-floating btn-tiny waves-effect waves-light red material-icons">not_interested</button>
+        </div>
+        <div class="row">
+          <h6 class="col s12"><%%= created_at%></h6>
+        </div>
     </script>
   </head>
   <body>
+  <div class="navbar-fixed">
+    <nav>
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><%= image_tag ("JournalLogo.png"), class: 'logo' %></a>
+      <ul class="right hide-on-med-and-down">
+        <li>Welcome Back <%= @user.username %>  </li>
+        <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
+      </ul>
+    </div>
+  </nav>
+</div>
     <%= yield %>
 
   <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>

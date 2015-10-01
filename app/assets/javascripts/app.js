@@ -64,4 +64,5 @@ $('form.journal-entry').on('submit', function(e){
   e.preventDefault();
   var entry = $(this).find("#my-journal").val();
   journals.create({entry: entry});
+  $('#my-journal').val('');
 });

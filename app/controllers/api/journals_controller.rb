@@ -9,17 +9,21 @@ class Api::JournalsController < ApplicationController
   end
 
   def create
-    journal = @current_user.journals.create(journal_params)
-    redirect_to '/users/profile'
+    render json: @current_user.journals.create(journal_params)
   end
 
+  def update
+    journal = @current_user.journals.find(params[:id])
+    render json: journal.update(journal_params)
+  end
+  
   def show
     render json: @current_user.journals.find(params[:id])
   end
 
   def destroy
     @current_user.journals.destroy(params[:id])
-    render status: 202
+    render json: {status: 202}
   end
 
   private

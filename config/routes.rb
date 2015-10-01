@@ -4,9 +4,9 @@ Rails.application.routes.draw do
     resources :journals, except: [:new, :edit]
   end
   # See how all your routes lay out with "rake routes".
-  get '/users/login' => 'users#login'
+  get '/users/login' => 'users#login' 
   get '/users/profile' => 'users#profile', as: :user_profile
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :edit, :update]
 
   post '/sessions' => 'sessions#create'
   delete '/sessions' => 'sessions#destroy', as: :log_out

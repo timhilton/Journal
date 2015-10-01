@@ -3,7 +3,6 @@ console.log('scripts loaded');
 var token = $('#api-token').val();
 $.ajaxSetup({
   headers:{
-    "accept": "application/json",
     "token": token
   }
 });
@@ -26,8 +25,7 @@ var JournalView = Backbone.View.extend({
   template: _.template( $('#journal-template').html()),
   render: function(){
     this.$el.empty();
-    var html = this.template(this.model.toJSON());
-    var $html = $(html);
+    var $html = $(this.template(this.model.toJSON()));
     this.$el.append($html);
   },
   events:{
@@ -56,14 +54,14 @@ var JournalListView = Backbone.View.extend({
 });
 
 var journals = new JournalCollection();
-var journalPainter = new JournalListView({
+var journalsPainter = new JournalListView({
   collection: journals,
   el: $('#journal-list')
 });
 journals.fetch();
 
-$('.journal-entry').on('submit', function(e){
+$('form.journal-entry').on('submit', function(e){
   e.preventDefault();
-  var newEntry = $(this).find("#my-journal").val();
-  journals.create({entry: newEntry});
+  var entry = $(this).find("#my-journal").val();
+  journals.create({entry: entry});
 });

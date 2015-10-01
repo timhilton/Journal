@@ -1,8 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-
   has_many :journals
-
   before_create :generate_token
 
   def generate_token

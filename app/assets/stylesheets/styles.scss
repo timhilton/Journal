@@ -33,6 +33,7 @@ $background: asset-data-url('papyrus.jpg');
 .login-form {
   background-color: white;
   padding: 5vh;
+  box-shadow: 5px 5px 5px $shadow;
 }
 .collapsible-body {
   padding: 5vh;
@@ -53,6 +54,11 @@ h1, h2, h3, h4, h5, h6 {
   color: $text;
 }
 
+p {
+  color: $text;
+  font-size: 1em;
+}
+
 .btn {
   background-color: $journalgreen;
 }
@@ -63,7 +69,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #my-journal {
   margin-left: -2.5vw;
-  margin-right: 2.5vw;
+  margin-right: 1vw;
 }
 
 .remove {
@@ -82,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5vh;
   margin-left: 5vw;
   width: 85vw;
-  margin-bottom: 10vh;
+  margin-bottom: 2vh;
 }
 
 .edit {
@@ -93,12 +99,11 @@ h1, h2, h3, h4, h5, h6 {
   display: inline;
 }
 
-#journal-list {
-  border-top: 1px solid $journalgreen;
-  margin-left: 37vw;
-  width: 50vw;
+.journal-list {
+  float: left;
+  width: 55vw;
   padding: 2vh;
-  height: 70vh;
+  height: 68vh;
   overflow: scroll;
 }
 
@@ -109,4 +114,18 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   box-shadow: 5px 5px 5px $shadow;
   background: $background;
+}
+.entry-wrapper {
+  border-bottom: 1px solid $journalgreen;
+}
+
+.profile-wrapper {
+  float: left;
+}
+
+.profile-pic {
+  margin-top: 2.5vh;
+  height: 175px;
+  border-radius: 12px;
+  border: 1px solid $journalgreen;
 }

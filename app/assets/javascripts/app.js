@@ -66,3 +66,12 @@ $('form.journal-entry').on('submit', function(e){
   journals.create({entry: entry});
   $('#my-journal').val('');
 });
+
+var pic = $('.profile-pic');
+if (pic.html()){
+  pic.hide();
+}else {
+  pic.show();
+}
+
+$('.modal-trigger').leanModal();

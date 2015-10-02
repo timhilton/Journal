@@ -13,7 +13,14 @@
 <div class="row">
   <div class="profile-wrapper col s5">
     <div class="profile">
-    <img class="profile-pic" src="<%= @user.image_url %>" />
+    <img class="profile-pic modal-trigger" href="#modal1" src="<%= @user.image_url %>" />
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <img src="http://i.imgur.com/LCtVvTg.jpg" /></a>" />
+      </div>
+      <div class="modal-footer">
+   </div>
+    </div>
     <h4><%= @user.username %></h3>
     <p><%= @user.age %></p>
     <p><%= @user.city %>, <%= @user.state %></p>

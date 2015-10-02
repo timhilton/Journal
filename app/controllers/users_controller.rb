@@ -16,6 +16,7 @@ class UsersController < ApplicationController
   def edit
     authenticate!
     @user = User.find(params[:id])
+    render layout: 'edit_layout'
   end
 
   def update

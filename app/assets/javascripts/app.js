@@ -75,3 +75,10 @@ if (pic.html()){
 }
 
 $('.modal-trigger').leanModal();
+
+$('.collapsible-header').on('click', function(){
+  $('.collapsible-body').slideDown("slow");
+  $('.collapsible-header').slideUp("slow");
+  $('.smallword').hide('slow');
+  $('.welcome').animate({'margin-bottom': '-5vh'});
+});

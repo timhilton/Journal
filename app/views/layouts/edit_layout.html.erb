@@ -9,8 +9,8 @@
   <div class="navbar-fixed">
     <nav>
     <div class="nav-wrapper">
-      <a href="#!" class="brand-logo"><%= image_tag ("JournalLogo.png"), class: 'logo' %></a>
-      <ul class="right hide-on-med-and-down">
+      <%= image_tag ("JournalLogo.png"), class: 'logo' %>
+      <ul class="right">
         <li><a href="/users/profile">Back to profile</a></li>
         <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
       </ul>

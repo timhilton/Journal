@@ -13,9 +13,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require materialize
+//= require moment
+//= require moment-timezone
 //= require underscore
 //= require backbone
 //= require app
 //= require turbolinks
+
 
 console.log('Profile manifest');

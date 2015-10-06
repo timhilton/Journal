@@ -1,5 +1,5 @@
 $journalgreen: rgb(7, 208, 136);
-$shadow: rgb(87, 87, 87);
+$shadow: 5px 5px 5px rgb(87, 87, 87);
 $text: rgb(46, 46, 46);
 $background: asset-data-url('papyrus.jpg');
 
@@ -33,7 +33,7 @@ $background: asset-data-url('papyrus.jpg');
 .login-form {
   background-color: white;
   padding: 5vh;
-  box-shadow: 5px 5px 5px $shadow;
+  box-shadow: $shadow;
 }
 .collapsible-body {
   padding: 5vh;
@@ -112,7 +112,7 @@ p {
   margin: 2.5vh auto;
   padding: 2.5vh;
   border-radius: 12px;
-  box-shadow: 5px 5px 5px $shadow;
+  box-shadow: $shadow;
   background: $background;
 }
 .entry-wrapper {
@@ -148,3 +148,78 @@ p {
   border-radius: 12px;
   border: 2px solid $journalgreen;
 }
+
+@media only screen
+ and (max-width:768px){
+   h3.welcome {
+     font-size: 1.5em;
+     text-align: center;
+   }
+   .splash-logo {
+     height: 10vh;
+   }
+   .logo {
+     height: 5vh;
+     margin-left: 1vw;
+     margin-top: 2vh;
+   }
+   #login {
+     width: 80vw;
+     margin: 0 auto;
+   }
+   .inputs, .bio {
+     width: 65vw;
+   }
+   h5 {
+     font-size:1em;
+   }
+  .profile {
+    position: absolute;
+    margin-top: -47.5vh;
+    width: 90vw;
+    display: inline-block;
+  }
+  .profile-pic {
+    float: left;
+    width: 25vw;
+    height: 15vh;
+  }
+  .profile-content {
+    float: left;
+    width: 60vw;
+    padding-left: 4vw;
+  }
+  #journal-list {
+    float: none;
+    width: 100vw;
+    padding: 2vh;
+    height: 100%;
+  }
+  .journal {
+    width: 90vw;
+    margin-left: 0;
+  }
+  .entry-wrapper {
+    margin-left: 0;
+    margin-top: 35vh;
+    width: 90vw;
+  }
+  #btn {
+    margin-left: 0;
+    width: 12vw;
+  }
+  #my-journal {
+    width: 70vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+  }
+  .remove {
+    margin-top: -1.5vh;
+  }
+  .modal-content img {
+    width: 80vw;
+  }
+  #modal1 {
+    width: 90vw;
+  }
+ }

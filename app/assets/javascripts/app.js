@@ -82,3 +82,10 @@ $('.collapsible-header').on('click', function(){
   $('.smallword').hide('slow');
   $('.welcome').animate({'margin-bottom': '-5vh'});
 });
+
+$('.timestamp').ready(function(){
+  moment.tz.add('America/New_York|EST EDT|50 40|0101|1Lz50 1zb0 Op0');
+  var dec = moment($('.timestamp').html(''));
+  var converted = dec.tz('America/New_York').format('ha z');
+  $('.timestamp').html(converted);
+});

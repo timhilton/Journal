@@ -10,6 +10,7 @@ https://limitless-anchorage-9337.herokuapp.com/
   - create short journal entries so that I can remember events more clearly.
   - see a list of journal entries.
   - enter my personal information and change my password.
+  - access my account on my mobile device.
 
 
 ## Technologies

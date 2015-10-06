@@ -7,19 +7,19 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
-  <div class="navbar-fixed">
-    <nav>
-    <div class="nav-wrapper">
-      <%= image_tag ("JournalLogo.png"), class: 'logo' %>
-      <ul class="right">
-        <li><a href="/users/profile">Back to profile</a></li>
-        <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
-      </ul>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <%= image_tag ("JournalLogo.png"), class: 'logo' %>
+          <ul class="right">
+            <li><a href="/users/profile">Back to profile</a></li>
+            <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
     <%= yield %>
 
-  <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
   </body>
 </html>

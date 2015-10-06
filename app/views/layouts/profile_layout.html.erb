@@ -7,7 +7,6 @@
     <%= csrf_meta_tags %>
 
     <script type="text/template" id="journal-template">
-
       <div class="row">
         <h4 class="col s10"><%%= entry %></h4>
         <button type="button" class="remove btn-floating btn-tiny waves-effect waves-light red material-icons">not_interested</button>
@@ -15,20 +14,21 @@
     </script>
   </head>
   <body>
-  <div class="navbar-fixed">
-    <nav>
-    <div class="nav-wrapper">
-      <%= image_tag ("JournalLogo.png"), class: 'logo' %>
-      <ul class="right">
-        <li class="hide-on-med-and-down">Welcome Back <%= @user.username %>  </li>
-        <li><a href="/users/<%= @user.id%>/edit">Edit Profile</a></li>
-        <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
-      </ul>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <%= image_tag ("JournalLogo.png"), class: 'logo' %>
+          <ul class="right">
+            <li class="hide-on-med-and-down">Welcome Back <%= @user.username %>  </li>
+            <li><a href="/users/<%= @user.id%>/edit">Edit Profile</a></li>
+            <li><%= link_to 'Log-Out', log_out_path, method: :delete %></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
+    
     <%= yield %>
 
-  <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'users', 'data-turbolinks-track' => true %>
   </body>
 </html>

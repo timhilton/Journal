@@ -1,17 +1,23 @@
 <input type="hidden" id='api-token' value="<%= @user.token %>">
+
 <div class="container">
+
   <div class="entry-wrapper">
-  <form class="journal-entry col s12" action="/api/journals" method="post">
-    <div class="row">
-      <p class="material-icons prefix edit col s1">edit</p>
-      <input type="text" id="my-journal" class="col s10" name="journal[entry]" placeholder="Create a journal entry">
-      <button type="submit" id="btn" class="btn waves-effect waves-light material-icons col s1">send</button>
-    </div>
-  </form>
+    <form class="journal-entry col s12" action="/api/journals" method="post">
+      <div class="row">
+        <p class="material-icons prefix edit col s1">edit</p>
+        <input type="text" id="my-journal" class="col s10" name="journal[entry]" placeholder="Create a journal entry">
+        <button type="submit" id="btn" class="btn waves-effect waves-light material-icons col s1">send</button>
+      </div>
+    </form>
   </div>
+
   <div class="row">
+
     <div class="profile-wrapper col s5">
+
       <div class="profile">
+
         <img class="profile-pic modal-trigger" href="#modal1" src="<%= @user.image_url %>" />
           <div id="modal1" class="modal">
             <div class="modal-content">
@@ -20,16 +26,20 @@
             <div class="modal-footer">
             </div>
           </div>
+
         <div class="profile-content">
           <h4><%= @user.username %></h3>
           <p><%= @user.age %></p>
           <p><%= @user.city %>, <%= @user.state %></p>
           <p>BIO: <%= @user.bio %></p>
         </div>
+
       </div>
+
     </div>
 
     <div id="journal-list" class="journal-list col s7">
     </div>
+
   </div>
 </div>

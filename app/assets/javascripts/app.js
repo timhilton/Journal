@@ -67,6 +67,7 @@ $('form.journal-entry').on('submit', function(e){
   $('#my-journal').val('');
 });
 
+//if no pic then hide outline
 var pic = $('.profile-pic');
 if (pic.html()){
   pic.hide();
@@ -74,8 +75,10 @@ if (pic.html()){
   pic.show();
 }
 
+//modal trigger
 $('.modal-trigger').leanModal();
 
+//login form animation
 $('.collapsible-header').on('click', function(){
   $('.collapsible-body').slideDown("slow");
   $('.collapsible-header').slideUp("slow");

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Journal | Personal MicroJournal</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div class="navbar-fixed">
-    <nav>
-    <div class="nav-wrapper">
-      <%= image_tag ("JournalLogo.png"), class: 'logo' %>
-      <ul class="right">
-        <li><a href="/">Home</a></li>
-      </ul>
+  <head>
+    <title>Journal | Personal MicroJournal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <%= image_tag ("JournalLogo.png"), class: 'logo' %>
+          <ul class="right">
+            <li><a href="/">Home</a></li>
+          </ul>
+        </div>
+      </nav>
     </div>
-  </nav>
-</div>
-<%= yield %>
-
-</body>
+    <%= yield %>
+  </body>
 </html>
